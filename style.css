@@ -1,0 +1,163 @@
+/* CSS VARIABLES */
+
+:root{
+    --bg-color:#ffffff;
+    --text-color:#222;
+    --card-bg:#f4f4f4;
+    --primary:#2563eb;
+}
+
+.dark-mode{
+    --bg-color:#121212;
+    --text-color:#ffffff;
+    --card-bg:#1e1e1e;
+    --primary:#60a5fa;
+}
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:var(--bg-color);
+    color:var(--text-color);
+    transition:0.4s;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:var(--primary);
+    color:white;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+}
+
+#theme-btn{
+    padding:8px 12px;
+    border:none;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:40vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h2{
+    font-size:2rem;
+}
+
+/* CSS GRID */
+
+.grid-layout{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:var(--card-bg);
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* FLEXBOX */
+
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:15px;
+}
+
+.skills-container span{
+    background:var(--primary);
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+.project-grid{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
+.project{
+    flex:1;
+    min-width:220px;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+}
+
+/* TABLET */
+
+@media(min-width:768px){
+
+.grid-layout{
+    grid-template-columns:1fr 1fr;
+}
+
+#projects{
+    grid-column:span 2;
+}
+
+}
+
+/* DESKTOP */
+
+@media(min-width:1024px){
+
+.grid-layout{
+    grid-template-columns:repeat(3,1fr);
+}
+
+#about{
+    grid-column:span 2;
+}
+
+#projects{
+    grid-column:span 3;
+}
+
+.hero h2{
+    font-size:3rem;
+}
+
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:20px;
+}
